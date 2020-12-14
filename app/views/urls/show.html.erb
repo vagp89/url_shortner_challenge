@@ -1,0 +1,3 @@
+  <% if !@url.nil? %>
+    <h2>The generated code is <%= link_to @url.code, short_path(@url.code) %></h2>
+  <% end %>
