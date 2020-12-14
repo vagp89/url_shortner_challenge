@@ -1,0 +1,6 @@
+  <% if !@url.nil? %>
+    <h2>Shortcode: <%= link_to @url.code, short_path(@url.code), target: "_blank" %></h2>
+    <h2>Times Accessed: <%= @url.count_visit %></h2>
+    <h2>Date Registered: <%= @url.created_at %></h2>
+    <h2>Last Accessed: <%= @url.updated_at %></h2>
+  <% end %>

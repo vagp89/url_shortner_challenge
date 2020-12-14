@@ -32,10 +32,16 @@ class UrlsController < ApplicationController
 
   def redirect
     @url = Url.find_by(code: params[:code])
+    puts "here"
     if !@url.nil?
-      puts @url[:url]
+      @url.count_visit = @url.count_visit + 1;
+      @url.save
       redirect_to @url.url
     end
+  end
+
+  def stats
+    @url = Url.find_by(code: params[:code])
   end
 
   def show
