@@ -1,8 +1,10 @@
 <%= form_with model: @url do |form| %>
   <p>Please input url you want to shorten: <%= form.text_field :link %></p>
-  <p>Shortner code to link url to (optional): <%= form.text_field :code, minlength: 4 %></p>
+  <p>Shorten code to link url to (optional): <%= form.text_field :code, minlength: 4 %></p>
   <% flash.each do |key, value| %>
-    <div class="alert"><%= value %></div>
+    <div class="alert alert-danger" role="alert">
+      <%= value %>
+    </div>
   <% end %>
-  <%= form.submit %>
+  <%= form.submit 'Generated short code', :class => 'btn btn-primary' %>
 <% end %>

@@ -1,3 +1,13 @@
-  <% if !@url.nil? %>
-    <h2>The generated code is <%= link_to @url.code, short_path(@url.code), target: "_blank" %></h2>
-  <% end %>
+<div class="container">
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <% if !@url.nil? %>
+        <h2>The generated code is <%= link_to @url.code, short_path(@url.code), target: "_blank" %></h2>
+      <% end %>
+      <div>
+        <%= link_to "back", urls_path %>
+      </div>
+      <div>
+        <%= link_to "see stats", stats_path(@url.code) %>
+      </div>
+    </div>
+</div>
