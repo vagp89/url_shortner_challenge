@@ -1,5 +1,5 @@
 <%= form_with model: @url do |form| %>
-  <p>Please input url you want to shorten: <%= form.text_field :url %></p>
+  <p>Please input url you want to shorten: <%= form.text_field :link %></p>
   <p>Shortner code to link url to (optional): <%= form.text_field :code, minlength: 4 %></p>
   <% flash.each do |key, value| %>
     <div class="alert"><%= value %></div>

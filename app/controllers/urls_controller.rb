@@ -20,7 +20,7 @@ class UrlsController < ApplicationController
      @url.code = @url.shortster_url
     end
 
-    @url.url = params[:url][:url]
+    @url.link = params[:url][:link]
 
     if @url.save
       redirect_to url_path id: @url.id
@@ -32,11 +32,10 @@ class UrlsController < ApplicationController
 
   def redirect
     @url = Url.find_by(code: params[:code])
-    puts "here"
     if !@url.nil?
       @url.count_visit = @url.count_visit + 1;
       @url.save
-      redirect_to @url.url
+      redirect_to @url.link
     end
   end
 

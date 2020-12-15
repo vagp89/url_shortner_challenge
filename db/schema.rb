@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_12_14_151927) do
 
   create_table "urls", force: :cascade do |t|
-    t.string "url"
+    t.string "link"
     t.string "code"
     t.integer "count_visit"
     t.datetime "created_at", precision: 6, null: false
