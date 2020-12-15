@@ -26,7 +26,7 @@ You can start the rails server using the command given below.
 
 3. `bundle exec rails s`
 
-4. And now you can visit the site with the URL `http://localhost:3000/urls`
+4. And now you can visit the site with the URL `http://localhost:3000`
 
 Notes:
 1. I assumed that it was not necessary to create a table for users since there is no requirement to show who created the link
